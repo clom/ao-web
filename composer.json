@@ -1,0 +1,10 @@
+{
+    "name": "clom/ao-web",
+    "authors": [
+        {
+            "name": "Kento Nomiyama",
+            "email": "nomiyama@clom-networks.com"
+        }
+    ],
+    "require": {}
+}
