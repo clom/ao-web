@@ -11,10 +11,6 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    //return $router->app->version();
-    return view('index');
-});
-
+$router->get('/', 'Controller@login');
 $router->get('/login', 'Controller@login');
 $router->post('/callback', 'Controller@callback');
