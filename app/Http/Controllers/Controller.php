@@ -75,13 +75,13 @@ class Controller extends BaseController
             $result = curl_exec($curl);
             $response = json_decode($result, true);
             $status_code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-            //curl_close($curl);
 
             if ($status_code !== 200) {
                 Log::info(curl_error($curl));
                 return FALSE;
             }
 
+            curl_close($curl);
             return $response['id_token'];
         } catch (Exception $e) {
             Log::info($e->getMessage());
